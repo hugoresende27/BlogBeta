@@ -9,8 +9,13 @@
 <body>
     <h1>Produtos</h1>
     <a href="/about">about</a>
-    <a href="/compact">compact</a>
-    <p>{{ $title }}</p>
-    <p>{{  $desc }}</p>
+  <?php
+  if (isset($title)) {
+    echo $title."--".$desc;
+  } 
+
+  
+
+?>
 </body>
 </html>
