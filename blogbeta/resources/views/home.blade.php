@@ -7,6 +7,8 @@
     <title>Laravel from Scratch</title>
 </head>
 <body>
+    <a href="/products">Products</a>
+    <a href="/products2">Products 2</a>
     <h1>New home page</h1>
 </body>
 </html>
