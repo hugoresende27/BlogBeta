@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdsController;
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,5 +15,7 @@ use App\Http\Controllers\ProdsController;
 
 
 
-///// ROUTE TO USERS --- function  /////////////////////////////////////////
+///// /////////////////////////////// /////////////////////////////////////////
 Route::get('/', [PagesController::class, 'index']);
+///// /////////////////////////////// /////////////////////////////////////////
+Route::get('/about', [PagesController::class, 'about']);
