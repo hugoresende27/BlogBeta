@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layout.app')
+
+@section('content')
+
     <title>
         Personal Website - Code With Dary
     </title>
@@ -36,7 +35,7 @@
 
             <ul>
                 <li>
-                    <a href="">About</a>
+                    <a href="">Aboutaa</a>
                 </li>
                 <li>
                     <a href="">Portfolio</a>
@@ -200,5 +199,5 @@
             </p>
         </div>
     </footer>
-</body>
-</html>
+
+@endsection

@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class PostFactory extends Factory
+class XpFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,10 +15,9 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            //
+            'points'=>rand(0,999),
             'user_id'=>User::factory(),
-            'title' => $this->faker->title,
-            'body' => $this->faker->sentence(),
-            'created_at' => now(),  
         ];
     }
 }

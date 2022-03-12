@@ -12,10 +12,13 @@
 
     <ul>
         <li>
-            <a href="">About</a>
+            <a href="/about">About</a>
         </li>
         <li>
-            <a href="">Portfolio</a>
+            <a href="/posts">Posts</a>
+        </li>
+        <li>
+            <a href="/relations">Relations</a>
         </li>
         <li>
             <a href="">Contact</a>

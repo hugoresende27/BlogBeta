@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreateProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-     
-            $table->bigIncrements('id');   //metodo increment para AUTO_INCREMENTE 
+        Schema::create('profiles', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('title');
-            $table->mediumText('body');
+            $table->string('twitter_url');
+            $table->string('website_url');
+            $table->string('github_url');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('profiles');
     }
 }

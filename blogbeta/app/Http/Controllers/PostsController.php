@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Xp;
+use App\Models\Tag;
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -124,12 +128,22 @@ class PostsController extends Controller
         //                 ]);
 
         ///////////////////////// DELETE //////////////////////////////////////////////////////////////////////////////
-        $posts = DB::table('posts')
+        // $posts = DB::table('posts')
                 
-                        ->where('id','=',8)
-                        ->delete();
+        //                 ->where('id','=',8)
+        //                 ->delete();
 
-        dd($posts);
+        // dd($posts);
+
+        $posts = Post::all();
+        $users = User::all();
+        $xp = Xp::all();
+        $tags = Tag::all();
+        foreach ($posts as $u){
+            // dd($u->tags);
+        }
+        
+        return view ('posts.index', compact('posts','users','tags'));
 
     }
 }
