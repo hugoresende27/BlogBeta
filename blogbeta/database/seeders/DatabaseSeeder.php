@@ -32,5 +32,14 @@ class DatabaseSeeder extends Seeder
             'name'  => 'Goto',
            
         ]);
+        // \DB::table('affiliations')->insert([
+        //     'name'  => 'liberal',
+           
+        // ]);
+        // \DB::table('affiliations')->insert([
+        //     'name'  => 'conservative',
+           
+        // ]);
+        \App\Models\Video::factory(3)->create();
     }
 }

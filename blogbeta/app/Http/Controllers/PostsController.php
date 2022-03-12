@@ -6,6 +6,8 @@ use App\Models\Xp;
 use App\Models\Tag;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Video;
+use App\Models\Affiliation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -139,11 +141,14 @@ class PostsController extends Controller
         $users = User::all();
         $xp = Xp::all();
         $tags = Tag::all();
-        foreach ($posts as $u){
-            // dd($u->tags);
-        }
+        $affs = Affiliation::all();
+        $video = Video::all();
+        // dd($affs);
+        // foreach ($video as $u){
+        //     dd($u->series);
+        // }
         
-        return view ('posts.index', compact('posts','users','tags'));
+        return view ('posts.index', compact('posts','users','tags','video'));
 
     }
 }

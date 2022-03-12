@@ -51,6 +51,17 @@
         </div>
     @endforeach
 
+    <p class="text-center">Videos Series </p>
+
+    @foreach ($video as $item)
+
+        <ul>
+            <li>video {{ $item->title }} belongs to serie {{  $item->series->title }}</li>
+            {{-- <li>video {{ $item->title }} belongs to serie {{  $item->watchable->id }}</li> --}}
+        </ul>
+        
+    @endforeach
+
  
 
 

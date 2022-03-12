@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
@@ -34,5 +35,30 @@ class Post extends Model
     ///posts 
     ///tags ['family','personal','work']
     ///post_tag
+
+    public function like($user = null)
+    {
+
+        $user = $user ? : auth()->user();
+
+        return $this->likes()->attach($user);
+
+    }
+    public function likes()
+    {
+        return $this->belongsToMany(User::class);
+
+    }
+
+    //posts
+     // id
+     // title
+     // body
+    //users 
+     // id
+
+    //post_user
+     //user_id
+     //post_id
 }
 
